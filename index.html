@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>TouchTetris</title>
+    <link rel="stylesheet" href="master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+    <link rel="stylesheet" href="widgetTetris.css" type="text/css"/>
+  </head>
+  <body onload="init()">
+    <div id="rotation" class="display"></div>
+    <div id="moveLeft" class="display"></div>
+    <div id="moveRight" class="display"></div>
+    <div id="moveDown" class="display"></div>
+
+    <div id="_debug"></div>
+    <div id="board"></div>
+    <div id="background"></div>
+
+    <div id="score">
+      SCORE: <span id="score_value">0</span>
+    </div>
+    <div id="logo">Tetraminos v1.0</div>
+    <div id="next_label">Next:</div>
+
+    <div id="next">
+      <div id="n00"></div>
+      <div id="n01"></div>
+      <div id="n02"></div>
+      <div id="n03"></div>
+      <div id="n10"></div>
+      <div id="n11"></div>
+      <div id="n12"></div>
+      <div id="n13"></div>
+      <div id="n20"></div>
+      <div id="n21"></div>
+      <div id="n22"></div>
+      <div id="n23"></div>
+      <div id="n30"></div>
+      <div id="n31"></div>
+      <div id="n32"></div>
+      <div id="n33"></div>
+    </div>
+
+    <div id="game_over">Game Over</div>
+
+    <div id="menu">
+      <ul>
+        <li id="start">
+          <div onclick="start();">START</div>
+        </li>
+        <li id="restart">
+          <div onclick="hideMenu();restart();">RESTART</div>
+        </li>
+        <li id="resume">
+          <div onclick="hideMenu();resume();">RESUME</div>
+        </li>
+        <li id="_about">
+          <div onclick="about();">ABOUT</div>
+        </li>
+        <li id="_main">
+          <div onclick="_main();">EXIT</div>
+        </li>
+      </ul>
+    </div>
+    <div onclick="hideAbout();" id="about">
+        ABOUT<br/><br/><br/>
+        Tetraminos is a clone of tetris game created by Alexey Pajitnov, Dmitry Pavlovsky e Vadim Gerasimov in 1984.<br/><br/>
+        In this version you can use touch feature of your WindowsPhone to move the tetraminos.<br/><br/>
+        <br/><br/>
+        Enjoy yourself!
+        <br/><br/><br/><br/><br/>
+        Orange Marques dos Santos<br/>
+        orange@tagcity.com
+        www.tagcity.com.br
+    </div>
+
+    <script src="cordova.js"></script>
+	<script src="hammer.min.js"></script>
+	<script src="Tetramino.js"></script>
+    <script src="widgetTetris.js"></script>
+  </body>
+</html>
